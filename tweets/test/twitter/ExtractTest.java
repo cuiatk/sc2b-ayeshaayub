@@ -6,6 +6,7 @@ package twitter;
 import static org.junit.Assert.*;
 
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Set;
 
@@ -27,23 +28,29 @@ public class ExtractTest {
     
     @Test(expected=AssertionError.class)
     public void testAssertionsEnabled() {
-        assert false; // make sure assertions are enabled with VM argument: -ea
+        assert false; // make sure assertions are enabled with VM argument:-ea
     }
     
     @Test
-    public void testGetTimespanTwoTweets() {
-        Timespan timespan = Extract.getTimespan(Arrays.asList(tweet1, tweet2));
-        
-        assertEquals("expected start", d1, timespan.getStart());
-        assertEquals("expected end", d2, timespan.getEnd());
-    }
+    public void testGetTimespanTwoTweets() { }
     
     @Test
     public void testGetMentionedUsersNoMention() {
         Set<String> mentionedUsers = Extract.getMentionedUsers(Arrays.asList(tweet1));
-        
-        assertTrue("expected empty set", mentionedUsers.isEmpty());
+       assertTrue("expected empty set", mentionedUsers.isEmpty());
     }
+    @Test
+
+    public void testGetTimespanNoTweet() {
+
+
+        Timespan timespan = Extract.getTimespan(new ArrayList<Tweet>());
+        assertEquals(timespan.getEnd(), timespan.getStart());         
+    }/
+ 
+
+   
+    
 
     /*
      * Warning: all the tests you write here must be runnable against any
