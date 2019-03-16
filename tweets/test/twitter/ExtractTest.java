@@ -46,7 +46,7 @@ public class ExtractTest {
 
         Timespan timespan = Extract.getTimespan(new ArrayList<Tweet>());
         assertEquals(timespan.getEnd(), timespan.getStart());         
-    }/
+    }
  
 
    
