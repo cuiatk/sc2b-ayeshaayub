@@ -94,7 +94,7 @@ public class ExtractTest {
         assertTrue(mentionedUsersLowerCase.containsAll(Arrays.asList("test1", "test2")));
     }
     
-    public void testGetMentionedUsersTwoeMentionOneTweetrepeateduser() {         
+      public void testGetMentionedUsersTwoeMentionOneTweetrepeateduser() {         
         Set<String> mentionedUsers = Extract.getMentionedUsers(Arrays.asList(tweet6));
         Set<String> mentionedUsersLowerCase = new HashSet<>();
         for (String mentionedUser : mentionedUsers) {
@@ -105,7 +105,7 @@ public class ExtractTest {
         
     }
 
-    /*
+      /*
      * Warning: all the tests you write here must be runnable against any
      * Extract class that follows the spec. It will be run against several staff
      * implementations of Extract, which will be done by overwriting

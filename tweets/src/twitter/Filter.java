@@ -28,10 +28,12 @@ public class Filter {
      * @param username
      *            Twitter username, required to be a valid Twitter username as
      *            defined by Tweet.getAuthor()'s spec.
-     * @return all and only the tweets in the list whose author is username, in
+        * @return all and only then    tweets in the list whose author is username, in
      *         the same order as in the input list.
-     */
-    public static List<Tweet> writtenBy(List<Tweet> tweets, String username) {
+        */
+    
+	
+	public static List<Tweet> writtenBy(List<Tweet> tweets, String username) {
         assertFalse(tweets.isEmpty());
         List<Tweet> tweetsfromusername = new ArrayList<>();
         for (Tweet tweet : tweets) {
@@ -45,7 +47,7 @@ public class Filter {
     }
 
     /**
-     * Find tweets that were sent during a particular timespan.
+     *  Find tweets that were sent during a particular timespan.
      * 
      * @param tweets
      *            a list of tweets with distinct ids, not modified by this
@@ -109,3 +111,4 @@ public class Filter {
     }
 
 }
+ 
